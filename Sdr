@@ -1,1 +1,331 @@
 
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d18">
+<title>خليني ذكرى جميلة عندك ❤️</title>
+
+<style>
+:root {
+  --bg:#170d18;
+  --pink:#f4b8cc;
+  --soft:#f8e7ee;
+  --gold:#e8c7a1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ background:radial-gradient(ellipse at top,#432238 0,#1b101d 48%,#100b13 100%);
+ color:var(--soft);
+ font-family:Tahoma,Arial,sans-serif;
+ min-height:100vh;
+}
+button,input{font:inherit}
+.hidden{display:none!important}
+
+#gate{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:24px;
+ text-align:center;
+}
+.gate-card{
+ width:min(100%,430px);
+ padding:38px 26px;
+ border:1px solid #ffffff24;
+ border-radius:28px;
+ background:#ffffff0b;
+ box-shadow:0 25px 90px #0008;
+ backdrop-filter:blur(12px);
+}
+.heart{
+ font-size:42px;
+ display:inline-block;
+ animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+ 50%{transform:scale(1.18);filter:drop-shadow(0 0 18px #f4a9c7)}
+}
+h1{
+ font-weight:500;
+ color:var(--pink);
+ line-height:1.7;
+ margin:14px 0;
+}
+.gate-card p{line-height:2;color:#e9d8e1}
+#password{
+ width:100%;
+ padding:15px;
+ border:1px solid #f4b8cc66;
+ border-radius:14px;
+ background:#100b13;
+ color:white;
+ text-align:center;
+ letter-spacing:5px;
+ outline:none;
+ margin:12px 0;
+}
+#unlock{
+ border:0;
+ border-radius:30px;
+ padding:13px 34px;
+ background:linear-gradient(120deg,#f5bfd1,#d995b2);
+ color:#321b29;
+ cursor:pointer;
+ font-weight:bold;
+}
+#error{color:#ffb7c8;min-height:24px;font-size:14px}
+
+main{
+ max-width:900px;
+ margin:auto;
+ padding:28px 18px 70px;
+}
+.hero{text-align:center;padding:38px 8px 24px}
+.eyebrow{color:var(--gold);letter-spacing:2px;font-size:13px}
+.hero h1{font-size:clamp(27px,6vw,43px);margin:12px 0}
+.hero p{color:#e7cbd8;line-height:2}
+
+.music{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:12px;
+ margin:20px auto 32px;
+ padding:12px 18px;
+ width:max-content;
+ max-width:100%;
+ border:1px solid #ffffff24;
+ border-radius:40px;
+ background:#ffffff0b;
+}
+.music button{
+ width:42px;
+ height:42px;
+ border:0;
+ border-radius:50%;
+ background:var(--pink);
+ color:#351d2b;
+ cursor:pointer;
+ font-size:18px;
+}
+.music span{font-size:14px;color:#f5dce7}
+
+.message{
+ position:relative;
+ margin:0 auto 34px;
+ padding:28px 24px;
+ border:1px solid #f4b8cc40;
+ border-radius:24px;
+ background:linear-gradient(145deg,#ffffff10,#ffffff05);
+ box-shadow:0 18px 55px #0004;
+ line-height:2.25;
+ font-size:17px;
+ white-space:pre-line;
+ text-align:center;
+}
+.message:before{
+ content:"“";
+ position:absolute;
+ top:-23px;
+ right:20px;
+ font-size:70px;
+ color:#f4b8cc55;
+}
+.message strong{
+ display:block;
+ color:var(--pink);
+ margin-top:12px;
+ font-size:21px;
+}
+.section-title{
+ text-align:center;
+ color:var(--pink);
+ font-weight:500;
+ margin:42px 0 20px;
+}
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:14px;
+}
+.photo{
+ margin:0;
+ padding:7px;
+ border-radius:18px;
+ background:#ffffff12;
+ border:1px solid #ffffff20;
+ overflow:hidden;
+ box-shadow:0 12px 35px #0005;
+}
+.photo img{
+ display:block;
+ width:100%;
+ height:100%;
+ aspect-ratio:4/5;
+ object-fit:cover;
+ border-radius:12px;
+ transition:transform .6s;
+}
+.photo:active img{transform:scale(1.025)}
+.closing{
+ text-align:center;
+ color:#e9cbd8;
+ line-height:2.2;
+ margin:44px 0 0;
+}
+.closing .heart{font-size:30px}
+footer{
+ text-align:center;
+ color:#b99eae;
+ font-size:12px;
+ margin-top:38px;
+}
+@media(min-width:650px){
+ .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .photo img{aspect-ratio:3/4}
+}
+@media(max-width:380px){
+ .message{font-size:15px;padding:22px 17px}
+ .gallery{gap:9px}
+}
+</style>
+</head>
+
+<body>
+
+<section id="gate">
+ <div class="gate-card">
+  <div class="heart">❤️</div>
+  <h1>في كلام كان نفسي أقولهولك</h1>
+  <p>
+   وفي ذكريات حبيت أرجع أفتكرها معاكي…<br>
+   اكتبي كلمة السر عشان تفتحي الموقع
+  </p>
+
+  <form id="unlockForm">
+   <input id="password" type="password"
+    inputmode="numeric" placeholder="كلمة السر"
+    autocomplete="off" aria-label="كلمة السر">
+
+   <button id="unlock" type="submit">افتحي الذكريات</button>
+   <div id="error"></div>
+  </form>
+ </div>
+</section>
+
+<main id="memories" class="hidden">
+
+ <header class="hero">
+  <div class="eyebrow">حاجة صغيرة من قلبي ليكي</div>
+  <h1>خليني ذكرى جميلة عندك ❤️</h1>
+  <p>يمكن الكلام ده يقدر يوصل إحساس معرفتش أقوله</p>
+ </header>
+
+ <div class="music">
+  <button id="musicToggle">▶</button>
+  <span>خليني ذكرى — أغنية لينا 🎵</span>
+
+  <audio id="song" preload="none" loop>
+   <source src="https://raw.githubusercontent.com/empiresilver39-afk/-/refs/heads/main/12.Khaleny_Zekra%202.mp3"
+   type="audio/mpeg">
+  </audio>
+ </div>
+
+ <section class="message">
+أنا عارف ان احنا بقالنا فترة بعاد عن بعض، وإن الدنيا مش أحسن حاجة ما بينا الفترة دي، بس بجد مش حابب اننا نفضل كده. نفسي نرجع نتكلم ونفهم بعض ونصلح اللي بينا واحدة واحدة ومن غير ضغط. انتي لسه غالية عندي، وأنا لسه يهمني إننا نبقى كويسين مع بعض، وحبيت أقولك اللي جوايا بدل ما أفضل ساكت
+
+  <strong>بحبك ❤️</strong>
+ </section>
+
+ <h2 class="section-title">شوية ذكريات ❤️</h2>
+
+ <section class="gallery">
+
+  <figure class="photo">
+   <img src="https://i.ibb.co/j9DNx6RQ/IMG-7683.jpg"
+   alt="ذكرى 1" loading="lazy">
+  </figure>
+
+  <figure class="photo">
+   <img src="https://i.ibb.co/nqd2Zrb5/IMG-7682.jpg"
+   alt="ذكرى 2" loading="lazy">
+  </figure>
+
+  <figure class="photo">
+   <img src="https://i.ibb.co/8nmz9MVp/IMG-7681.jpg"
+   alt="ذكرى 3" loading="lazy">
+  </figure>
+
+  <figure class="photo">
+   <img src="https://i.ibb.co/nsDqDZG2/IMG-7680.jpg"
+   alt="ذكرى 4" loading="lazy">
+  </figure>
+
+ </section>
+
+ <div class="closing">
+  <div class="heart">♡</div>
+  <div>
+   مش بطلب ننسى اللي فات…<br>
+   بس نفسي ندي للي جاي فرصة أحسن.
+  </div>
+ </div>
+
+ <footer>اتعملت بكل حب ❤️</footer>
+
+</main>
+
+<script>
+const form=document.getElementById('unlockForm');
+const password=document.getElementById('password');
+const error=document.getElementById('error');
+const gate=document.getElementById('gate');
+const memories=document.getElementById('memories');
+const song=document.getElementById('song');
+const toggle=document.getElementById('musicToggle');
+
+form.addEventListener('submit',async function(e){
+ e.preventDefault();
+
+ if(password.value.trim()!=='2482024'){
+  error.textContent='الباسورد مش صحيح، جربي تاني ❤️';
+  password.value='';
+  return;
+ }
+
+ gate.classList.add('hidden');
+ memories.classList.remove('hidden');
+ window.scrollTo(0,0);
+
+ try{
+  await song.play();
+  toggle.textContent='Ⅱ';
+ }catch(_){
+  toggle.textContent='▶';
+ }
+});
+
+toggle.addEventListener('click',async function(){
+ if(song.paused){
+  try{
+   await song.play();
+   toggle.textContent='Ⅱ';
+  }catch(_){
+   toggle.textContent='▶';
+  }
+ }else{
+  song.pause();
+  toggle.textContent='▶';
+ }
+});
+</script>
+
+</body>
+</html>
